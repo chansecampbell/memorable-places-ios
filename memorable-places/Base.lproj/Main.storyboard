@@ -12,7 +12,7 @@
         <!--Places-->
         <scene sceneID="D8t-o1-BrG">
             <objects>
-                <tableViewController id="FOd-SM-Mp6" sceneMemberID="viewController">
+                <tableViewController id="FOd-SM-Mp6" customClass="TableViewController" customModule="memorable_places" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="ZMC-dL-1NP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -35,10 +35,13 @@
                     <navigationItem key="navigationItem" title="Places" id="Amw-e2-BaW">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="JDX-9E-qut">
                             <connections>
-                                <segue destination="BYZ-38-t0r" kind="show" id="471-gH-bZZ"/>
+                                <segue destination="BYZ-38-t0r" kind="show" identifier="toMap" id="471-gH-bZZ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="table" destination="ZMC-dL-1NP" id="JPn-Kp-mlN"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vXe-zE-mcP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -71,12 +74,27 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="1qr-v1-cfy">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </mapView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="1qr-v1-cfy" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="5Fm-k2-Srt"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="1qr-v1-cfy" secondAttribute="bottom" id="Zox-SF-xqh"/>
+                            <constraint firstItem="1qr-v1-cfy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="a4M-23-P6q"/>
+                            <constraint firstItem="1qr-v1-cfy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="mRi-yF-cVg"/>
+                            <constraint firstAttribute="trailing" secondItem="1qr-v1-cfy" secondAttribute="trailing" id="yuz-NF-7co"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="map" destination="1qr-v1-cfy" id="ICy-Nw-oqz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-126" y="139"/>
+            <point key="canvasLocation" x="-127.2" y="138.98050974512745"/>
         </scene>
     </scenes>
 </document>

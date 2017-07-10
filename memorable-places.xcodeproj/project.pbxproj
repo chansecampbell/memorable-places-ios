@@ -14,6 +14,8 @@
 		8029462B1F0F87DF002E1288 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 802946291F0F87DF002E1288 /* LaunchScreen.storyboard */; };
 		802946361F0F87DF002E1288 /* memorable_placesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802946351F0F87DF002E1288 /* memorable_placesTests.swift */; };
 		802946411F0F87DF002E1288 /* memorable_placesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802946401F0F87DF002E1288 /* memorable_placesUITests.swift */; };
+		80C936901F138D640067CBB0 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C9368F1F138D640067CBB0 /* TableViewController.swift */; };
+		80C936931F13B67C0067CBB0 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80C936921F13B67C0067CBB0 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		8029463C1F0F87DF002E1288 /* memorable-placesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "memorable-placesUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		802946401F0F87DF002E1288 /* memorable_placesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = memorable_placesUITests.swift; sourceTree = "<group>"; };
 		802946421F0F87DF002E1288 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		80C9368F1F138D640067CBB0 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		80C936921F13B67C0067CBB0 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80C936931F13B67C0067CBB0 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +86,7 @@
 				802946341F0F87DF002E1288 /* memorable-placesTests */,
 				8029463F1F0F87DF002E1288 /* memorable-placesUITests */,
 				8029461E1F0F87DF002E1288 /* Products */,
+				80C936911F13B67C0067CBB0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,6 +109,7 @@
 				802946271F0F87DF002E1288 /* Assets.xcassets */,
 				802946291F0F87DF002E1288 /* LaunchScreen.storyboard */,
 				8029462C1F0F87DF002E1288 /* Info.plist */,
+				80C9368F1F138D640067CBB0 /* TableViewController.swift */,
 			);
 			path = "memorable-places";
 			sourceTree = "<group>";
@@ -123,6 +130,14 @@
 				802946421F0F87DF002E1288 /* Info.plist */,
 			);
 			path = "memorable-placesUITests";
+			sourceTree = "<group>";
+		};
+		80C936911F13B67C0067CBB0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				80C936921F13B67C0067CBB0 /* CoreLocation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,6 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				802946231F0F87DF002E1288 /* ViewController.swift in Sources */,
+				80C936901F138D640067CBB0 /* TableViewController.swift in Sources */,
 				802946211F0F87DF002E1288 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -514,6 +530,7 @@
 				802946471F0F87DF002E1288 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		802946481F0F87DF002E1288 /* Build configuration list for PBXNativeTarget "memorable-placesTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +539,7 @@
 				8029464A1F0F87DF002E1288 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8029464B1F0F87DF002E1288 /* Build configuration list for PBXNativeTarget "memorable-placesUITests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +548,7 @@
 				8029464D1F0F87DF002E1288 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
